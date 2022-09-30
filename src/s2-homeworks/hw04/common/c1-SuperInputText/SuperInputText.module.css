@@ -15,11 +15,13 @@
 }
 
 .superInput {
+    padding: 5px 10px;
 }
 
 .errorInput {
     border: 1px solid #CC1439;
     border-radius: 5px;
+    padding: 5px 10px;
 }
 
 .errorInput:focus {
