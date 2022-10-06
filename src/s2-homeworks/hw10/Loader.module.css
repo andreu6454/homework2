@@ -1,3 +1,54 @@
 .loader {
-    /*свг и/или анимация*/
+    margin-left: 10px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    animation: rotate 2s linear infinite;
 }
+
+@keyframes rotate  {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loader span {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    margin: 4px;
+    animation: scale 3s linear infinite;
+}
+
+@keyframes span {
+    50% {
+       transform: scale(1.2);
+    }
+}
+
+.loader span:nth-child(1){
+    border-radius: 50% 50% 0 50%;
+    background: linear-gradient(to top left, #f4f3d8, #e0e663, #cadd25);
+    transform-origin: bottom right;
+    box-shadow: 0 0 15px #cadd25;
+}
+.loader span:nth-child(2){
+    border-radius: 50% 50% 50% 0;
+    background: linear-gradient(to top right, #dcf0f6, #53c8f6, #0aedfc);
+    transform-origin: bottom left;
+    box-shadow: 0 0 15px #0aedfc;
+}
+.loader span:nth-child(3){
+    border-radius: 50% 0 50% 50%;
+    background: linear-gradient(to bottom left, #0aedfc, #53c8f6, #dcf0f6);
+    transform-origin: top right;
+    box-shadow: 0 0 15px #dcf0f6;
+}
+.loader span:nth-child(4){
+    border-radius: 0 50% 50% 50%;
+    background: linear-gradient(to bottom right, #fae6e2, #f27775, #ed4849);
+    transform-origin: top left;
+    box-shadow: 0 0 15px #ed4849;
+}
+
