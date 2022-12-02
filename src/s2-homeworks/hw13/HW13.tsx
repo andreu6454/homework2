@@ -40,7 +40,21 @@ const HW13 = () => {
 
             })
             .catch((e) => {
-                // дописать
+                if(e.code === "ERR_BAD_RESPONSE"){
+                    setCode('Код 400!')
+                    setImage(error400)
+                }
+                if(e.code === "ERR_BAD_REQUEST"){
+                    setCode('Код 500!')
+                    setImage(error500)
+                }
+                if(e.code === "ERR_NETWORK"){
+                    setCode('errorUnknown!')
+                    setImage(errorUnknown)
+                }
+                console.log(e.code)
+
+
 
             })
     }
