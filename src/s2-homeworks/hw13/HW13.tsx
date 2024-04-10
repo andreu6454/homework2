@@ -36,20 +36,21 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Код 200!')
                 setImage(success200)
-                setInfo(res.data.info)
+                setText(res.data.info)
+                setInfo('')
                 // дописать
             })
             .catch((e) => {
-                console.log(e)
-                setInfo(e?.response?.data?.info || '')
+                setInfo('')
+                setText(e?.response?.data?.info || '')
                 if (e.response.status === 400) {
                     setImage(error400)
                     setCode('Код 400!')
-                } else if (e.statusCode === 500) {
+                } else if (e.response.status === 500) {
                     setImage(error500)
                     setCode('Код 500!')
                 } else {
-                    setInfo('Unknown error')
+                    setText('Unknown error')
                     setImage(errorUnknown)
                     setCode('Код unknown!')
                 }
