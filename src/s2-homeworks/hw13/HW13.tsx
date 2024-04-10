@@ -50,7 +50,7 @@ const HW13 = () => {
                     setImage(error500)
                     setCode('Код 500!')
                 } else {
-                    setText('Unknown error')
+                    setText('Error')
                     setImage(errorUnknown)
                     setCode('Код unknown!')
                 }
